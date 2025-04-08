@@ -62,4 +62,11 @@ class Command(BaseCommand):
         ]
         Workout.objects.bulk_create(workouts)
 
+        # Debugging: Print confirmation of data creation
+        print("Users created:", users)
+        print("Teams created:", [team1, team2])
+        print("Activities created:", activities)
+        print("Leaderboard entries created:", leaderboard_entries)
+        print("Workouts created:", workouts)
+
         self.stdout.write(self.style.SUCCESS('Successfully populated the database with test data.'))
